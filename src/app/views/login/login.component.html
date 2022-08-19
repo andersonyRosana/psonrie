@@ -9,15 +9,21 @@
   
       <!-- Login Form -->
       <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
-        <input formControlName="user" type="text" class="fadeIn second" placeholder="login">
+        <input formControlName="username" type="text" class="fadeIn second" placeholder="login">
         <input formControlName="password" type="password" class="fadeIn third" placeholder="password">
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
+
+      <div class="class alert-danger" *ngIf="errorStatus">
+        <p> {{ errorMsj }} </p> 
+      </div>
   
       <!-- Remind Passowrd -->
       <div id="formFooter">
         <a class="underlineHover" href="#">Forgot Password?</a>
       </div>
+
+      <strong>{{loginForm.value.username}} </strong>
   
     </div>
   </div>

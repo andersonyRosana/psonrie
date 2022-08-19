@@ -1,4 +1,6 @@
+export type Roles = 'SUSCRIPTOR' | 'ADMIN';
+
 export interface responseI {
     status: string;
-    response: string;
+    result: string;
 }

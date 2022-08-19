@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+<!--<ul>
+  <li *ngFor="let psychologist of psychologists">
+      {{psychologist.name}}
+  </li>
+</ul>-->
+<div class="wrapper-grid">
+  <form class="container" (ngSubmit)="linkDescription(psychologist.id)" *ngFor="let psychologist of psychologists">
+    <div class='banner-img'></div>
+    <img src="{{ (psychologist.imageURL) }}" alt='profile image' class="profile-img">
+    <h1 class="name">{{psychologist.name}}</h1>
+    <p class="description">{{psychologist.presentation}}</p>
+    <button type="submit" class='btn'>mas informacion</button>
+  </form>
+</div>
+
+
+
+
+    
